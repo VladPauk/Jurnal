@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="group1" class="Group">
+        <property name="nameGroup" value="Гуманітарій"/>
+        <property name="id" value="1"/>
+        <property name="students">
+            <list>
+                <ref bean="student1"/>
+                <ref bean="student2"/>
+                <ref bean="student3"/>
+                <ref bean="student4"/>
+                <ref bean="student5"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="group2" class="Group">
+        <property name="nameGroup" value="Технарь"/>
+        <property name="id" value="2"/>
+        <property name="students">
+            <list>
+                <ref bean="student6"/>
+                <ref bean="student7"/>
+                <ref bean="student8"/>
+                <ref bean="student9"/>
+                <ref bean="student10"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="student1" class="Student">
+        <property name="name" value="Petro"/>
+        <property name="surname" value="Cidorenko"/>
+        <property name="status" value="online"/>
+        <property name="id" value="1"/>
+        <property name="mark" value="10"/>
+    </bean>
+
+    <bean id="student2" class="Student">
+        <property name="name" value="Vadim"/>
+        <property name="surname" value="Petrenko"/>
+        <property name="status" value="offline"/>
+        <property name="id" value="2"/>
+        <property name="mark" value="4"/>
+    </bean>
+
+    <bean id="student3" class="Student">
+        <property name="name" value="Vlad"/>
+        <property name="surname" value="Pauk"/>
+        <property name="status" value="online"/>
+        <property name="id" value="3"/>
+        <property name="mark" value="9"/>
+    </bean>
+
+    <bean id="student4" class="Student">
+        <property name="name" value="Artur"/>
+        <property name="surname" value="Ryduk"/>
+        <property name="status" value="online"/>
+        <property name="id" value="4"/>
+        <property name="mark" value="11"/>
+    </bean>
+
+    <bean id="student5" class="Student">
+        <property name="name" value="Jena"/>
+        <property name="surname" value="Dachyk"/>
+        <property name="status" value="ofline"/>
+        <property name="id" value="5"/>
+        <property name="mark" value="4"/>
+    </bean>
+
+    <bean id="student6" class="Student">
+        <property name="name" value="Tola"/>
+        <property name="surname" value="Shelehov"/>
+        <property name="status" value="offline"/>
+        <property name="id" value="6"/>
+        <property name="mark" value="2"/>
+    </bean>
+
+    <bean id="student7" class="Student">
+        <property name="name" value="Maks"/>
+        <property name="surname" value="Chay"/>
+        <property name="status" value="online"/>
+        <property name="id" value="7"/>
+        <property name="mark" value="9"/>
+    </bean>
+
+    <bean id="student8"
+          class="Student">
+        <property name="name" value="Sereja"/>
+        <property name="surname" value="Kyza"/>
+        <property name="status" value="online"/>
+        <property name="id" value="8"/>
+        <property name="mark" value="11"/>
+    </bean>
+    <bean id="student9" class="Student">
+        <property name="name" value="Oksana"/>
+        <property name="surname" value="Melnuk"/>
+        <property name="status" value="offline"/>
+        <property name="id" value="9"/>
+        <property name="mark" value="2"/>
+    </bean>
+    <bean id="student10" class="Student">
+        <property name="name" value="Nastya"/>
+        <property name="surname" value="Yakovenko"/>
+        <property name="status" value="online"/>
+        <property name="id" value="10"/>
+        <property name="mark" value="1"/>
+    </bean>
+</beans>
